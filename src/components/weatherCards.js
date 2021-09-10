@@ -1,11 +1,18 @@
 import React from 'react'
 
-function WeatherCards({datas}) {
-    console.log(datas)
+function WeatherCards({data}) {
+    console.log(data)
     return (
-    <div className="card-list">
-        {datas ? (
-            datas.map()
+    <div className="card" style={{width : "18rem"}}>
+        {data ? (
+            <div className="card-body">
+            <h5 className="card-title">{data.name}</h5>
+            <p className="card-text">{data.weather[0].main}</p>            
+            <div className="degrees">
+                <h2 className="card-degree" >{data.main.temp_min}</h2>
+                <h2 className="card-degree" >{data.main.temp_max}</h2>
+            </div>
+        </div>
         ):null}
     </div>
     )

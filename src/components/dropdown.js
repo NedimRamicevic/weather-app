@@ -7,9 +7,11 @@ function Dropdown({handleChange}) {
           id="great-names"
           onChange={(e)=>handleChange(e.target.value)}>
 
-          <option value="Frarthur">Frarthur</option>
-          <option value="Gromulus">Gromulus</option>
-          <option value="Thinkpiece">Thinkpiece</option>
+          <option value="London">London</option>
+          <option value="Münhen">Münhen</option>
+          <option value="Istanbul">Istanbul</option>
+          <option value="Paris">Paris</option>
+          <option value="Sarajevo">Sarajevo</option>
         </select>
         </div>
     )
