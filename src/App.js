@@ -1,6 +1,7 @@
 import Dropdown from './components/dropdown'
 import WeatherCards from './components/weatherCards'
 import {useState,useEffect} from 'react'
+import WeatherContext from './context/weatherDataContext'
 import './App.css';
 
 function App() {
@@ -19,8 +20,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Dropdown handleChange={handleChange}/> 
-      <WeatherCards data={weatherData} />      
+      <WeatherContext.Provider data={weatherData} handleChange={handleChange}>
+        <Dropdown /> 
+        <WeatherCards />      
+      </WeatherContext.Provider>  
     </div>
   );
 }
