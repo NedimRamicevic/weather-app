@@ -4,9 +4,8 @@ import WeatherContext from '../context/weatherDataContext'
 
 
 function Dropdown() {
-    const data = useContext(DropdownContext)
-    const handleChange = useContext(WeatherContext)
-    console.log("dropdown",handleChange)
+    console.log("neeeeedeeeeeensss")
+
     return (
         <div>
             <select

@@ -4,10 +4,9 @@ import {React, useContext} from 'react'
 function WeatherCards() {
     const veri = useContext(WeatherContext)
     const data = veri.weatherData
-    console.log("data",data)
     return (
     <div className="card" style={{width : "18rem"}}>
-        {data ? (
+        {data.main ? (
             <div className="card-body">
             <h5 className="card-title">{data.name}</h5>
             <p className="card-text">{data.weather.main}</p>            
