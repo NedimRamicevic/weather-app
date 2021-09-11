@@ -13,6 +13,7 @@ export const WeatherProvider = ({children})=>{
     })
     }
     const handleChange = (value) => {
+      console.log("handleChange",value)
         setSelected(value)
         getData(value)
       }
