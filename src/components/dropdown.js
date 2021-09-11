@@ -1,12 +1,9 @@
 import React,{useContext} from 'react'
-import DropdownContext from '../context/DropdwnContext'
 import WeatherContext from '../context/weatherDataContext'
 
 
 function Dropdown() {
-    const data = useContext(DropdownContext)
     const handleChange = useContext(WeatherContext).handleChange
-
     return (
         <div>
             <select

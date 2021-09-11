@@ -1,13 +1,11 @@
-import {createContext,useState,useEffect} from 'react'
+import {createContext,useState,useEffect,useReducer} from 'react'
 const WeatherContext = createContext()
-
+// }
 export const WeatherProvider = ({children})=>{
    
     const [selected, setSelected] = useState("London")
-    const [weatherData, setWeatherData] = useState("nothing")
-
+    const [weatherData, setWeatherData] = useState()
     const handleChange = (value) => {
-      console.log(value.target.value)
         setSelected(value.target.value)
       }
   useEffect(() => {
