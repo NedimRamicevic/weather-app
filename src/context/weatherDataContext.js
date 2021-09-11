@@ -3,24 +3,20 @@ const WeatherContext = createContext()
 
 export const WeatherProvider = ({children})=>{
    
-    const [selected, setSelected] = useState("Istanbul")
+    const [selected, setSelected] = useState("London")
     const [weatherData, setWeatherData] = useState("nothing")
-    const getData = (value) =>{
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selected}&units=metric&cnt=7&appid=3729444e5fb54634eff1e4e7722b1801`)
+
+    const handleChange = (value) => {
+      console.log(value.target.value)
+        setSelected(value.target.value)
+      }
+  useEffect(() => {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selected}&units=metric&cnt=7&appid=3729444e5fb54634eff1e4e7722b1801`)
     .then(x => x.json())
     .then(data => {
       setWeatherData(data)
     })
-    }
-    const handleChange = (value) => {
-      console.log("handleChange",value)
-        setSelected(value)
-        getData(value)
-      }
-  useEffect(() => {
-    getData(selected)
-    console.log("naber")
-  }, [])
+  }, [selected])
 
     return (
 

@@ -9,7 +9,7 @@ function WeatherCards() {
         {data.main ? (
             <div className="card-body">
             <h5 className="card-title">{data.name}</h5>
-            <p className="card-text">{data.weather.main}</p>            
+            <p className="card-text">{data.weather[0].main}</p>            
             <div className="degrees">
                 <h2 className="card-degree" >{data.main.temp_min}</h2>
                 <h2 className="card-degree" >{data.main.temp_max}</h2>
