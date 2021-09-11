@@ -5,3 +5,8 @@
   display: flex;
   justify-content:space-evenly;
 }
+
+.dropdown{
+  display: flex;
+  justify-content: flex-start;
+}
