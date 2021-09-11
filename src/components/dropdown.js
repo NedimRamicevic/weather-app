@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import DropdownContext from '../context/DropdwnContext'
+import WeatherContext from '../context/weatherDataContext'
 
-function Dropdown({handleChange}) {
+
+function Dropdown() {
+    const data = useContext(DropdownContext)
+    const handleChange = useContext(WeatherContext)
+    console.log("dropdown",handleChange)
     return (
         <div>
             <select
           id="great-names"
-          onChange={(e)=>handleChange(e.target.value)}>
+          >
 
           <option value="London">London</option>
           <option value="Münhen">Münhen</option>
